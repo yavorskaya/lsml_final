@@ -26,12 +26,13 @@ metric: Accuracy
 
 ### User instructions
 
+installation
+https://github.com/yavorskaya/lsml_final.git
 
-to run app
+running app
+docker-compose up --build
 
-$ sudo docker-compose up --build
-
-thenn open
+then open
 http://localhost:5000 (http://localhost:5000/home)
 
 upload a file
