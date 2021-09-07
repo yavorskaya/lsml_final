@@ -17,4 +17,24 @@ The dataset was downloaded from Kaggle (https://www.kaggle.com/fantacher/neu-met
 6. Scratches. 
 The database consists of 1,800 grayscale images, which are devided into train, valid and test datasets.
 
-Data can be downloaded 
+### Model description
+
+model: CNN,
+optimizer: AdamW, 
+loss: CrossEntropyLoss, 
+metric: Accuracy
+
+### User instructions
+
+
+to run app
+
+$ sudo docker-compose up --build
+
+thenn open
+http://localhost:5000 (http://localhost:5000/home)
+
+upload a file
+click 'upload'
+
+the results will be presented at http://localhost:5000/prediction
