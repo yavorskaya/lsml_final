@@ -7,8 +7,6 @@ import json
 import os
 from CNNNet import CNNNet
 import torch
-import pickle
-import matplotlib.pyplot as plt 
 from PIL import Image
 
 
@@ -18,6 +16,7 @@ model = CNNNet()
 model.load_state_dict(torch.load("modelCnn.pth", map_location="cpu"))
 model.eval()
 
+@app.route ('/', methods=["GET", "POST"])
 @app.route ('/home', methods=["GET", "POST"]) # Function handler for /
 def hello():
     if request.method == 'POST':
@@ -57,4 +56,4 @@ def prediction(filename):
     return render_template('prediction.html', predictions=predictions)
     
 if __name__ == '__main__':
-    app.run("0.0.0.0", 5000) # Run the server on port 5000
+    app.run("0.0.0.0", 5000, debug=True) # Run the server on port 5000
